@@ -1,0 +1,53 @@
+@font-face {
+    font-family: quicksand;
+    src: url("../fonts/quicksand/Quicksand-Regular.otf");
+}
+@font-face {
+    font-family: blackjack;
+    src: url('../fonts/blackjack/blackjack.otf');
+}
+
+body, div, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: blackjack, serif;
+    color: #ddd;
+    background: linear-gradient(to bottom right, rgba(131, 224, 112, 0.5), rgba(113, 19, 235, 0.5)), url('../patterns/dark_mosaic/dark_mosaic/dark_mosaic.png');
+}
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+    text-shadow: 1px 1px 1px #111, -1px 1px 1px #111, 1px -1px 1px #111, -1px -1px 1px #111;
+
+}
+
+#numberFrames {
+    width: 96%;
+    margin: 1em auto;
+    border: 1px solid white;
+}
+
+.frames {
+    font-size: 1.5em;
+    transition: 1s;
+    height: 2em;
+    width: 3em;
+    line-height: 2em;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: .2em;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    margin: .2em .1em;
+}
+.frames:hover {
+    transition: .2s;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #000;
+}
