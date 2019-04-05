@@ -12,6 +12,7 @@ const framesAmount = 100;
 
 ///////////////// Nombre de tentatives
 let attemptsAmount = 6;
+// ////////////// Nombre de tentatives pour machine-tableau
 // let currentAttempt = 0;
 
 

@@ -11,17 +11,18 @@ const attemptsBoxes = document.getElementsByClassName('attempts');
 startGame();
 
 
+
+
 function startGame() {
     for (let i = 0 ; i < clickableFrames.length ; i++) {
         clickableFrames[i].addEventListener('click', function(el){
-            attemptsAmount--;
-            attemptsBoxes[attemptsAmount].style.display = 'none';
-            if (attemptsAmount === 0) {
-                youLose();
-            }
-            else if (i === randomNumber) {
+            if (i === randomNumber) {
                 youWin();
-                return false;
+                i = 10000;
+            }
+            else if (attemptsAmount - 1 === 0) {
+                youLose();
+                i = 10000;
             }
             else if (i > randomNumber) {
                 for (let y = i ; y <= framesAmount ; y++) {
@@ -33,16 +34,22 @@ function startGame() {
                     clickableFrames[y].style.display = 'none';
                 }
             }
+            attemptsBoxes[attemptsAmount-1].style.display = 'none';
+            attemptsAmount--;
         });
     }
 }
 
 
 function youWin() {
-    alert("Vous avez gagné !!!!!!!!!!!!!");
+    let text = `Vous avez <span style="font-size: 1.7em;color: rgb(241, 55, 22);">gagné</span> !!!!!!!!!!!!!<br>Le nombre mystère était bien<br><span style="font-size: 1.7em;color: rgb(241, 55, 22);">${randomNumber}</span>`;
+    displayModalWindow(text);
+    
 }
 function youLose() {
-    alert("vous avez perdu");
+    let text = `vous avez perdu =(<br>Le nombre mystère était<br><span style="font-size: 1.7em;color: rgb(241, 55, 22);">${randomNumber}</span>`;
+    displayModalWindow(text);
+
 }
 
 
