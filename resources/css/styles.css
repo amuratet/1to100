@@ -33,12 +33,13 @@ h2 {
     font-size: 2em;
     text-align: center;
     font-family: quicksand, serif;
+    text-shadow: 1px 1px 1px #111, -1px 1px 1px #111, 1px -1px 1px #111, -1px -1px 1px #111;
 }
 
 #framesContainer {
     width: 96%;
     margin: 1em auto;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -52,14 +53,36 @@ h2 {
     min-width: 3em;
     line-height: 2em;
     text-align: center;
-    border: 1px solid #ddd;
+    border: 1px solid rgb(0, 0, 0);
     border-radius: .2em;
-    background-color: rgba(0, 0, 0, 0.6);
+    /* background-color: rgba(0, 0, 0, 0.6); */
     color: #fff;
     margin: .2em .1em;
 }
 .frames:hover {
     transition: .2s;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.7) !important;
     color: #000;
+    box-shadow: 2px 2px 5px black, -2px 2px 5px black;
+}
+
+/* .attemptsContainer {
+    display: flex;
+    flex-flow: row wrap;
+    
+} */
+.attempts {
+    width: 7em;
+    height: 3em;
+    background-color: rgb(228, 219, 92);
+    color: rgb(21, 6, 59);
+    font-family: quicksand, serif;
+    font-weight: bold;
+    line-height: 3em;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: .2em;
+    margin: 2em;
+    /* box-shadow: 2px 2px 5px black, -2px 2px 5px black; */
+    text-shadow: 1px 1px 1px #fff, -1px 1px 1px #fff, 1px -1px 1px #fff, -1px -1px 1px #fff;
 }
