@@ -7,37 +7,49 @@
     src: url('../fonts/blackjack/blackjack.otf');
 }
 
-body, div, p {
+body, div, p, h1, h2 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    background: linear-gradient(to bottom right, rgba(23, 51, 17, 0.7), rgba(25, 7, 48, 0.7)), url('../patterns/full-bloom/full-bloom.png');
+    height: 100%;
+}
+
 body {
-    height: 100vh;
     font-family: blackjack, serif;
     color: #ddd;
-    background: linear-gradient(to bottom right, rgba(131, 224, 112, 0.5), rgba(113, 19, 235, 0.5)), url('../patterns/dark_mosaic/dark_mosaic/dark_mosaic.png');
 }
 
 h1 {
     font-size: 3em;
     text-align: center;
     text-shadow: 1px 1px 1px #111, -1px 1px 1px #111, 1px -1px 1px #111, -1px -1px 1px #111;
-
 }
 
-#numberFrames {
+h2 {
+    font-size: 2em;
+    text-align: center;
+    font-family: quicksand, serif;
+}
+
+#framesContainer {
     width: 96%;
     margin: 1em auto;
     border: 1px solid white;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    cursor: url(../cursors/tap.png), pointer;
 }
 
 .frames {
     font-size: 1.5em;
     transition: 1s;
-    height: 2em;
-    width: 3em;
+    min-height: 2em;
+    min-width: 3em;
     line-height: 2em;
     text-align: center;
     border: 1px solid #ddd;
